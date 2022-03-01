@@ -7,26 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E25E411527CD1836006DCBA1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E25E411427CD1836006DCBA1 /* main.cpp */; };
 		E25E412827CDFED8006DCBA1 /* libonnxruntime.1.10.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E25E412727CDFED8006DCBA1 /* libonnxruntime.1.10.0.dylib */; };
 		E25E412927CDFF9A006DCBA1 /* libonnxruntime.1.10.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = E25E412727CDFED8006DCBA1 /* libonnxruntime.1.10.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E25E412F27CE4395006DCBA1 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E25E412E27CE4395006DCBA1 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E25E410F27CD1836006DCBA1 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		E25E412627CDF716006DCBA1 /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 16;
 			files = (
 				E25E412927CDFF9A006DCBA1 /* libonnxruntime.1.10.0.dylib in Embed Libraries */,
 			);
@@ -37,8 +28,8 @@
 
 /* Begin PBXFileReference section */
 		E25E411127CD1836006DCBA1 /* machine-learning-deployment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "machine-learning-deployment"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E25E411427CD1836006DCBA1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E25E412727CDFED8006DCBA1 /* libonnxruntime.1.10.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libonnxruntime.1.10.0.dylib; path = "machine-learning-deployment/libs/libonnxruntime.1.10.0.dylib"; sourceTree = "<group>"; };
+		E25E412E27CE4395006DCBA1 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +64,10 @@
 		E25E411327CD1836006DCBA1 /* machine-learning-deployment */ = {
 			isa = PBXGroup;
 			children = (
-				E25E411427CD1836006DCBA1 /* main.cpp */,
+				E25E412E27CE4395006DCBA1 /* main.c */,
 			);
 			path = "machine-learning-deployment";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		E25E411B27CD18FA006DCBA1 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -95,7 +86,6 @@
 			buildPhases = (
 				E25E410D27CD1836006DCBA1 /* Sources */,
 				E25E410E27CD1836006DCBA1 /* Frameworks */,
-				E25E410F27CD1836006DCBA1 /* CopyFiles */,
 				E25E412627CDF716006DCBA1 /* Embed Libraries */,
 			);
 			buildRules = (
@@ -144,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25E411527CD1836006DCBA1 /* main.cpp in Sources */,
+				E25E412F27CE4395006DCBA1 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
