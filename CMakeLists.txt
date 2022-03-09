@@ -38,5 +38,11 @@ add_executable(MachineLearningDeployment ${SOURCE_LIST})
 # 链接动态库
 target_link_libraries (MachineLearningDeployment ${LIB_LIST})
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
 # 拷贝文件
 file(COPY ${PROJECT_SOURCE_DIR}/assets/img.jpg ${PROJECT_SOURCE_DIR}/resources/onnx.onnx DESTINATION ${PROJECT_BINARY_DIR})
+
+set(CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR})
