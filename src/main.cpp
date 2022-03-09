@@ -13,6 +13,9 @@
 #include <algorithm>
 #include <unistd.h>
 
+
+#define constexpr const
+
 using namespace std;
 
 int main(){

@@ -10,3 +10,14 @@
 - [ ] Torch + OpenCV
 
 由于TensorFlow API过于混乱以及未向下兼容，暂不考虑部署使用。
+
+## 安装与使用
+
+使用cmake构建，请检查系统中是否正确安装cmake。
+
+```shell
+mkdir build
+cd build
+cmake ..
+make
+```
