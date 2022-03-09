@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.8)
 
 # 添加C++11的支持
-add_definitions(-std=c++17)
+add_definitions(-std=c++11)
 
 project(machine-learning-deployment VERSION 1.0)
 
