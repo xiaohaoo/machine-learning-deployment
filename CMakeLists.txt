@@ -17,10 +17,10 @@ aux_source_directory(${PROJECT_SOURCE_DIR}/src/ SOURCE_LIST)
 
 # 判断操作系统
 if(CMAKE_SYSTEM_NAME MATCHES "Windows")
-    set(LIB_LIST libonnxruntime.1.10.0 opencv_world455 opencv_world455d)
+    set(LIB_LIST onnxruntime.1.10.0 opencv_world455 opencv_world455d)
 else()
-    set(LIB_LIST libonnxruntime.1.10.0 libopencv_core.405 libopencv_imgcodecs.405 libopencv_videoio.405 libopencv_imgproc.405)
-endif(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    set(LIB_LIST onnxruntime.1.10.0 opencv_core.405 opencv_imgcodecs.405 opencv_videoio.405 opencv_imgproc.405)
+endif()
 
 # 定义可执行程序
 add_executable(MachineLearningDeployment ${SOURCE_LIST})
