@@ -6,7 +6,7 @@ add_definitions(-std=c++11)
 
 project(machine-learning-deployment VERSION 1.0)
 
-# 设置include路径和
+# 设置include路径
 include_directories(${PROJECT_SOURCE_DIR}/includes/ ${PROJECT_SOURCE_DIR}/src/)
 
 # 设置动态库的路径
@@ -16,20 +16,10 @@ link_directories(${PROJECT_SOURCE_DIR}/libs/)
 aux_source_directory(${PROJECT_SOURCE_DIR}/src/ SOURCE_LIST)
 
 # 判断操作系统
-if(CMAKE_SYSTEM_NAME MATCHES "Linux")
-
-elseif(CMAKE_SYSTEM_NAME MATCHES "Windows")
-
-elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
-
-    set(LIB_LIST libonnxruntime.1.10.0.dylib
-                 libopencv_core.405.dylib
-                 libopencv_imgcodecs.405.dylib
-                 libopencv_videoio.405.dylib
-                 libopencv_imgproc.405.dylib)
-
+if(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    set(LIB_LIST libonnxruntime.1.10.0 opencv_world455 opencv_world455d)
 else()
-
+    set(LIB_LIST libonnxruntime.1.10.0 libopencv_core.405 libopencv_imgcodecs.405 libopencv_videoio.405 libopencv_imgproc.405)
 endif(CMAKE_SYSTEM_NAME MATCHES "Linux")
 
 # 定义可执行程序
